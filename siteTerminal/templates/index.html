@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Liste de commandes</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}" />
+	<script src="{{ url_for('static', filename='js/script.js')}}"></script> 
+</head>
+
+<body>
+<form method="get" >
+<input type='text' id="value" name="value">
+<input type='submit' />
+</form>
+<div>{{ content }}</div>
+	  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+</body>
+</html> 
+
+

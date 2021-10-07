@@ -1,0 +1,18 @@
+Difficulté: IdNiveau, Descriptino, NbSymbCarte, TempsOrdi
+Collection, 11 Cartes, 0N Difficulté
+Cartes: IdCartes
+Contient, 6N Cartes, 0N Symbole : Postion
+Symbole: IdSymbole
+
+NiveauAtteintMax, 11 Joueur, 0N Difficulté
+Possède, 11 Partie, 0N Difficulté
+Init, 0N Cartes, 33 Partie :PositionInit
+EstJoué, 0N Partie, 0N Cartes, 1N Temps: EstJoueur, PositionCoup, EstGagnant
+Temps: tempsJoué
+
+Joueur: Username, MDP, Age, Pseudo
+Jouer, 0N Joueur, 11 Partie
+Partie: Idpartie, Durée, Note, Commentaire, date
+::
+
+#http://mocodo.wingi.net/
