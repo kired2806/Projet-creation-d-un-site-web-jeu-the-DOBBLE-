@@ -1,0 +1,31 @@
+p {
+    color: rgb(113, 179, 127);
+    font-size: 19px;
+}
+
+h1 {
+    color: violet;
+}
+
+.salutation {
+    color: brown;
+    font-size: 80px;
+    text-decoration: underline;
+}
+
+#MonLit {
+    color: aqua;
+}
+
+/* Select tout */
+* {
+    color: black;
+    font-size: 15px;
+}
+
+body {
+    background-image: url("./fond.jpg");
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
