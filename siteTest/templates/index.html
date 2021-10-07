@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Liste de commandes</title>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='css/main.css')}}"
+        />
+        <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+    </head>
+
+    <body>
+        <section>
+            <h1>Liste de commandes</h1>
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Date</th>
+                    <th>Client</th>
+                    <th>&nbsp;</th>
+                </tr>
+
+                {{content}}
+            </table>
+        </section>
+        <section id="detail"></section>
+        <section id="minmax"></section>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
