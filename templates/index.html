@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link
+            rel="stylesheet"
+            href="{{url_for('static', filename='css/main.css')}}"
+        />
+        <script src="{{url_for('static', filename='js/script.js')}}"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"
+        ></script>
+        <title>Dobble</title>
+    </head>
+
+    <body>
+        <h1 id="Title">DOBBLE</h1>
+        <form class="connection">
+            <fieldset id="champConnect">
+                <legend>Connection</legend>
+                <p>
+                    <label for="NomDeCompte">Nom de compte</label>
+                    <input
+                        type="text"
+                        name="ndc"
+                        id="NomDeCompte"
+                        value=""
+                        placeholder="Titi"
+                        required
+                    />
+                </p>
+                <p>
+                    <label for="MotDePasse">Mot de passe</label>
+                    <input
+                        type="password"
+                        name="mdp"
+                        id="MotDePasse"
+                        value=""
+                        placeholder="T1t1du31"
+                        required
+                    />
+                </p>
+                <p>
+                    <button
+                        type="button"
+                        id="buttonConnect"
+                        title="valider"
+                        onclick="connection()"
+                    >
+                        se connecter
+                    </button>
+                </p>
+                <p id="MessageConnection"></p>
+            </fieldset>
+        </form>
+        <form class="connection">
+            <fieldset>
+                <legend>Inscription</legend>
+                <p>
+                    <label for="INomDeCompte">Nom de compte</label>
+                    <input
+                        type="text"
+                        name="Indc"
+                        id="INomDeCompte"
+                        maxlength="20"
+                    />
+                </p>
+                <p>
+                    <label for="IMotDePasse">Mot de passe</label>
+                    <input
+                        type="password"
+                        name="Imdp"
+                        id="IMotDePasse"
+                        maxlength="40"
+                    />
+                </p>
+                <p>
+                    <label for="IPseudo">Pseudo</label>
+                    <input
+                        type="text"
+                        name="Ipsdo"
+                        id="IPseudo"
+                        maxlength="10"
+                    />
+                </p>
+                <p>
+                    <label for="Age">Age</label>
+                    <input type="text" name="Age" id="IAge" />
+                </p>
+                <p>
+                    <button
+                        type="button"
+                        id="buttonConnect"
+                        title="valider"
+                        onclick="inscription()"
+                    >
+                        S'inscrire
+                    </button>
+                </p>
+                <p id="MessageInscription"></p>
+            </fieldset>
+        </form>
+        <fieldset id="connected"></fieldset>
+        <div id="card">
+            <button
+                id="MaPomme"
+                type="button"
+                class="BouttonCarte"
+                onclick="test('/getTest?id=3')"
+                title="Si tu click un truc va apparaitre"
+            >
+                <img class="imgCardIndex" src="../static/image/apple.png" />
+            </button>
+            <a class="Element1">
+                <img class="imgCardIndex" src="../static/image/bed.png" />
+            </a>
+            <a class="Element2">
+                <img
+                    class="imgCardIndex"
+                    src="../static/image/dragon_fireball.png"
+                />
+            </a>
+            <a class="Element3">
+                <img class="imgCardIndex" src="../static/image/arrow.png" />
+            </a>
+            <a class="Element4">
+                <img
+                    class="imgCardIndex"
+                    src="../static/image/flower_pot.png"
+                />
+            </a>
+            <a class="Element5">
+                <img class="imgCardIndex" src="../static/image/beef.png" />
+            </a>
+        </div>
+        <p id="Test">Jeu réalise par</p>
+    </body>
+</html>

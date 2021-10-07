@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link
+            rel="stylesheet"
+            href="{{url_for('static', filename='css/main.css')}}"
+        />
+        <script src="{{url_for('static', filename='js/script.js')}}"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"
+        ></script>
+        <title>Dobble</title>
+    </head>
+
+    <body>
+        <div id="RETOUR"></div>
+        <h1>Dobble</h1>
+        <div id="gameButtom">
+            <button id="startButtom" onclick="gameAction(0)">
+                START
+            </button>
+            <button id="exitButtom" onclick="gameAction(1)">
+                EXIT
+            </button>
+            <button onclick="test()">
+                TEST genCard
+            </button>
+            <button onclick="test2()">
+                TEST COMMUNID
+            </button>
+        </div>
+        <div id="gameInfo">
+            <div id="timer"></div>
+            <div id="score"></div>
+            <div id="compteur">
+                <div id="compteurPioche">
+                    Carte restante :<span class="value"></span>
+                </div>
+                <div id="compteurJoueur">
+                    Carte joueur :<span class="value"></span>
+                </div>
+                <div id="compteurPc">Carte pc :<span class="value"></span></div>
+            </div>
+            <div id="testCartes"></div>
+            <div id="cPioche">PIOHCE : {{pioche}}</div>
+            <div id="cJoueur">JOUEUR : {{joueur}}</div>
+            <div id="cPc">ORDINATEUR : {{pc}}</div>
+        </div>
+        <div id="gameRecap">
+            INFORMATION
+            <div id="compteurJoueur">
+                Carte joueur: <span class="value"></span>
+            </div>
+            <div id="compteurPc">Carte pc: <span class="value"></span></div>
+            <div>Temps: <span id="timerEnd"></span></div>
+            <h2 id="msgEnd"></h2>
+        </div>
+    </body>
+</html>

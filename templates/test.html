@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='css/styletest.css')}}"
+        />
+        <!-- <script src="{{ url_for('static', filename='js/script.js')}}"></script> -->
+        <title>Super Page</title>
+    </head>
+    <body>
+        <h1><span class="salutation">Bienvenue</span> dans le SUPER TEST</h1>
+        <p>Ce ci est un paragraphe</p>
+        <p>
+            Ok c'est cool<br />
+            okok nickel alors ce mot est un peu <em>important</em> et lui
+            carrément <strong>IMPORTANT</strong> <br />
+            et celui la on le <mark>marque</mark> !
+        </p>
+        <p>On va tester les listes:</p>
+        <ul>
+            <li>Fraises</li>
+            <li>Cerises</li>
+            <li>{{content}}</li>
+            <li>
+                <img
+                    src="{{url_for('static', filename='./image/apple.png')}}"
+                    alt="pomme"
+                    title="Ceci est une belle pomme"
+                />
+            </li>
+        </ul>
+        <p>On va test les listes énumérées</p>
+        <ol>
+            <li>Premier</li>
+            <li>Deuxieme</li>
+            <li>
+                <a href="https://www.google.com" title="c'est google.">
+                    Troisieme
+                </a>
+            </li>
+        </ol>
+        <p>
+            Si tu cliques elle grossira !
+            <a href="{{url_for('static', filename='./test-apple.png')}}">
+                <img
+                    src="{{url_for('static', filename='./image/apple.png')}}"
+                    alt="pomme"
+                    title="Ceci est une belle pomme"
+                />
+            </a>
+        </p>
+        <figure id="MonLit">
+            <img src="{{url_for('static', filename='./image/bed.png')}}" />
+            <figcaption>Un lit.</figcaption>
+        </figure>
+    </body>
+</html>

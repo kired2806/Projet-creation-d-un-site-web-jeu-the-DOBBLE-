@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link
+            rel="stylesheet"
+            href="{{url_for('static', filename='css/main.css')}}"
+        />
+        <script src="{{url_for('static', filename='js/script.js')}}"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"
+        ></script>
+        <title>Dobble</title>
+    </head>
+
+    <body>
+        <div id="RETOUR">TEST</div>
+        <h1>Dobble</h1>
+        <p>
+            {{pseudo}}
+            <br />
+            <button
+                type="button"
+                id="buttonDisconnect"
+                title="valider"
+                onclick="disconnection()"
+            >
+                se déconnecter
+            </button>
+        </p>
+        <div id="menu">
+            <div class="dropdown">
+                <button class="dropbtn" onclick="selectGame()">
+                    <img src="static/playButton.jpg" width="100" height="100" />
+                </button>
+                <div class="dropdown-content">
+                    {{Menue}}
+                </div>
+            </div>
+        </div>
+        <div id="tab">
+            <div id="HightScore" class="elem">
+                <p class="tabTitle">Hight Score</p>
+                <table>
+                    <tr>
+                        <th>Pseudo</th>
+                        <th>Score</th>
+                        <th>Niveau</th>
+                        <th>date</th>
+                    </tr>
+                    {{HightScore}}
+                </table>
+            </div>
+            <div id="Historique" class="elem">
+                <p class="tabTitle">Historique</p>
+                <table>
+                    <tr>
+                        <th>Score</th>
+                        <th>Niveau</th>
+                        <th>date</th>
+                    </tr>
+                    {{Histo}}
+                </table>
+            </div>
+            <div id="HightScoreDay" class="elem">
+                <p class="tabTitle">Hight Score Day</p>
+                <table>
+                    <tr>
+                        <th>Pseudo</th>
+                        <th>Score</th>
+                        <th>Niveau</th>
+                        <th>date</th>
+                    </tr>
+                    {{HightScoreDay}}
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
